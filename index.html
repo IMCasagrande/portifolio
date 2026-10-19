@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0a416d">
   <title>Instituto Médico Casagrande | Bem-estar e longevidade</title>
-  <meta name="description" content="Instituto Médico Casagrande: cuidado médico com foco em bem-estar e longevidade em Artur Nogueira, SP. Ortopedia, clínica geral, nutrologia e geriatria. Agende pelo WhatsApp.">
+  <meta name="description" content="Instituto Médico Casagrande, em Artur Nogueira, SP: ortopedia e cirurgia do quadril com o Dr. Raul Casagrande; clínica médica, nutrologia e geriatria com a Dra. Rafaella. Agende pelo WhatsApp.">
   <meta property="og:title" content="Instituto Médico Casagrande">
   <meta property="og:description" content="Bem-estar e longevidade com cuidado médico em diferentes fases da vida, em Artur Nogueira.">
   <meta property="og:image" content="assets/consultorio-poster.jpg">
@@ -261,6 +261,10 @@
     .doctor-areas { max-width: 44ch; margin-bottom: 18px; }
     .credentials { margin: 0; padding-top: 16px; border-top: 1px solid rgba(255, 255, 255, .22); color: #e6f1f6; font-size: .82rem; }
     .credentials small { display: block; margin-top: 6px; color: #b5d1e2; font-size: .72rem; }
+    .doctor-link { display: inline-flex; align-items: center; gap: 10px; width: fit-content; margin: 2px 0 20px; padding: 10px 18px; border: 1px solid rgba(201, 240, 235, .45); border-radius: 999px; color: var(--white); font-size: .88rem; font-weight: 700; text-decoration: none; transition: background-color 200ms ease, border-color 200ms ease, color 200ms ease, transform 160ms ease-out; }
+    .doctor-link svg { width: 16px; height: 16px; transition: transform 200ms var(--ease-out); }
+    .doctor-link:active { transform: scale(.97); }
+    @media (hover: hover) and (pointer: fine) { .doctor-link:hover { border-color: var(--white); color: var(--ink); background: var(--white); } .doctor-link:hover svg { transform: translateX(3px); } }
 
     /* ---------- institute services ---------- */
     .institute-services { background: var(--mist); }
@@ -431,6 +435,7 @@
           <a href="#cuidado">Cuidado</a>
           <a href="#equipe">Médicos</a>
           <a href="#instituto">Instituto</a>
+          <a href="artigos/">Artigos</a>
           <a href="#localizacao">Localização</a>
         </nav>
         <a class="btn nav-cta" href="https://api.whatsapp.com/send/?phone=5519993735336&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">Agendar consulta</a>
@@ -450,7 +455,7 @@
             <a class="btn btn--ghost" href="#cuidado">Conheça as áreas</a>
           </div>
           <ul class="hero-note" aria-label="Áreas de atuação">
-            <li>Ortopedia</li><li>Clínica geral</li><li>Nutrologia</li><li>Geriatria</li>
+            <li>Ortopedia e quadril</li><li>Clínica médica</li><li>Nutrologia</li><li>Geriatria</li>
           </ul>
         </div>
 
@@ -468,13 +473,13 @@
           <div class="float-a">
             <figure class="portrait portrait--a">
               <picture><source srcset="assets/dra-rafaella-mesa.webp" type="image/webp"><img src="assets/dra-rafaella-mesa.jpg" alt="" width="1100" height="1366" fetchpriority="high"></picture>
-              <figcaption><strong>Dra. Rafaella Casagrande</strong><span>Clínica geral · Nutrologia · Geriatria</span></figcaption>
+              <figcaption><strong>Dra. Rafaella Casagrande</strong><span>Clínica médica · Nutrologia · Geriatria</span></figcaption>
             </figure>
           </div>
           <div class="float-b">
             <figure class="portrait portrait--b">
               <picture><source srcset="assets/dr-raul-mesa.webp" type="image/webp"><img src="assets/dr-raul-mesa.jpg" alt="" width="1100" height="1366"></picture>
-              <figcaption><strong>Dr. Raul Casagrande</strong><span>Ortopedia · Performance · Longevidade</span></figcaption>
+              <figcaption><strong>Dr. Raul Casagrande</strong><span>Ortopedia · Cirurgia do Quadril</span></figcaption>
             </figure>
           </div>
         </div>
@@ -486,7 +491,7 @@
         <span class="care-index-label">Um ponto de partida para cada necessidade</span>
         <ul class="care-index-list">
           <li><a href="#raul">Ortopedia</a></li>
-          <li><a href="#rafaella">Clínica geral</a></li>
+          <li><a href="#rafaella">Clínica médica</a></li>
           <li><a href="#rafaella">Nutrologia</a></li>
           <li><a href="#rafaella">Geriatria</a></li>
           <li><a href="#servicos">Pediatria</a></li>
@@ -548,7 +553,7 @@
             <a href="#raul">
               <svg class="icon" viewBox="0 0 48 48" aria-hidden="true"><path pathLength="1" d="M14 8c-3 0-5 2.5-4 5.5 1 2.4 3.4 3 5 3.2l14 14c.2 1.6.8 4 3.2 5 3 1 5.5-1 5.5-4 2.6.4 5-1.4 5-4s-2.6-4.5-5.4-3.8L22.7 9.3C23.4 6.5 21.6 4 19 4s-4.4 2.4-4 5"/><path pathLength="1" d="M6 42c6-2 10-6 12-12"/></svg>
               <h3>Movimento e saúde ortopédica</h3>
-              <p>Ortopedia, desempenho e cuidado com a saúde musculoesquelética com o Dr. Raul.</p>
+              <p>Fraturas, prótese de quadril e lesões do esporte com o Dr. Raul.</p>
               <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
             </a>
           </article>
@@ -556,7 +561,7 @@
             <a href="#rafaella">
               <svg class="icon" viewBox="0 0 48 48" aria-hidden="true"><path pathLength="1" d="M24 41S7 31 7 18.5C7 12.7 11.5 8 17 8c3 0 5.6 1.4 7 3.6C25.4 9.4 28 8 31 8c5.5 0 10 4.7 10 10.5C41 31 24 41 24 41Z"/><path pathLength="1" d="M10 24h8l3-6 5 11 3-5h9"/></svg>
               <h3>Saúde ao longo da vida</h3>
-              <p>Clínica geral, nutrologia e geriatria com a Dra. Rafaella.</p>
+              <p>Clínica médica, nutrologia, geriatria e saúde metabólica com a Dra. Rafaella.</p>
               <span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
             </a>
           </article>
@@ -587,10 +592,12 @@
               <picture><source srcset="assets/dr-raul-retrato.webp" type="image/webp"><img src="assets/dr-raul-retrato.jpg" alt="Retrato do Dr. Raul Marcel Casagrande" width="1024" height="1536" loading="lazy" data-parallax></picture>
             </figure>
             <div class="doctor-copy">
-              <p class="doctor-role">Ortopedia · Performance · Longevidade masculina</p>
+              <p class="doctor-role">Ortopedia e Traumatologia · Cirurgia do Fêmur, Quadril e Pelve</p>
               <h3>Dr. Raul Marcel Casagrande</h3>
-              <p class="doctor-areas">Atuação em ortopedia, performance e longevidade masculina.</p>
-              <p class="credentials">CRM 139.858 · RQE 132.410<small>Registros conforme publicação do Instituto no Instagram. Confirmar antes da publicação.</small></p>
+              <p class="doctor-areas">Ortopedista e traumatologista com expertise em cirurgia do fêmur, quadril e pelve. Membro titular da SBOT e da Sociedade Brasileira de Quadril, atua em hospital terciário em Jundiaí e é preceptor da Residência Médica em Ortopedia e Traumatologia da Faculdade de Medicina de Jundiaí.</p>
+              <p class="doctor-areas">Também aplica sua formação em fisiologia e biomecânica (mestrado) para prevenir doenças ósseas, melhorar a função musculoesquelética e tratar lesões do esporte.</p>
+              <a class="doctor-link" href="artigos/">Artigos e produção científica <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              <p class="credentials">CRM-SP 139.858 · RQE 132.410 · Responsável Técnico</p>
             </div>
           </article>
           <article class="doctor rv" id="rafaella" style="--d:120ms">
@@ -598,9 +605,10 @@
               <picture><source srcset="assets/dra-rafaella-retrato.webp" type="image/webp"><img src="assets/dra-rafaella-retrato.jpg" alt="Retrato da Dra. Rafaella Vilela Basso Casagrande" width="1024" height="1536" loading="lazy" data-parallax></picture>
             </figure>
             <div class="doctor-copy">
-              <p class="doctor-role">Clínica geral · Nutrologia · Geriatria</p>
+              <p class="doctor-role">Clínica médica · Nutrologia · Geriatria</p>
               <h3>Dra. Rafaella Vilela Basso Casagrande</h3>
-              <p class="doctor-areas">Atuação em clínica geral, nutrologia e geriatria.</p>
+              <p class="doctor-areas">Pós-graduada em Nutrologia (ABRAN) e em Geriatria (Hospital Sírio-Libanês). No Instituto, cuida da saúde metabólica e do envelhecimento saudável: emagrecimento, composição corporal, saúde hormonal e menopausa.</p>
+              <p class="doctor-areas">Atua em conjunto com a ortopedia para pacientes com osteoporose, sarcopenia e em recuperação pós-cirúrgica.</p>
               <p class="credentials">CRM 137.712</p>
             </div>
           </article>
@@ -680,6 +688,7 @@
           <p>Bem-estar e longevidade com cuidado médico próximo.</p>
         </div>
         <nav class="footer-links" aria-label="Links institucionais">
+          <a href="artigos/">Artigos do Dr. Raul</a>
           <a href="https://www.instagram.com/institutomedicocasagrande" target="_blank" rel="noopener noreferrer">Instagram</a>
           <a href="https://www.facebook.com/profile.php?id=61574718393743" target="_blank" rel="noopener noreferrer">Facebook</a>
         </nav>

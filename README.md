@@ -21,8 +21,8 @@ Site institucional do Instituto Médico Casagrande, feito para apresentar os mé
 
 **Médicos**
 
-- **Dr. Raul Marcel Casagrande**: ortopedia, performance e longevidade masculina
-- **Dra. Rafaella Vilela Basso Casagrande**: clínica geral, nutrologia e geriatria
+- **Dr. Raul Marcel Casagrande**: ortopedia e traumatologia, cirurgia do fêmur, quadril e pelve ([artigos científicos](artigos/))
+- **Dra. Rafaella Vilela Basso Casagrande**: clínica médica, nutrologia e geriatria
 
 ## Telas
 
@@ -49,6 +49,7 @@ Site institucional do Instituto Médico Casagrande, feito para apresentar os mé
 | Pasta / arquivo | Conteúdo |
 |---|---|
 | `index.html` | Site principal |
+| `artigos/` | Artigos, livros, ensino e congressos do Dr. Raul |
 | `links/` | Página de links para a bio do Instagram |
 | `assets/` | Fotos dos médicos, logos e vídeo do consultório |
 | `docs/` | Imagens usadas neste README |
