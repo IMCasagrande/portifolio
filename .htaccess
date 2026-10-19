@@ -19,9 +19,11 @@ RedirectMatch 404 ^/(README\.md|\.gitignore|docs/.*)$
   Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()"
 </IfModule>
 
-# Tipos de arquivo
+# Tipos de arquivo e codificação
+AddDefaultCharset UTF-8
 AddType application/manifest+json .webmanifest
 AddType text/plain .txt
+AddCharset UTF-8 .txt .xml .webmanifest .html
 
 # Cache: imagens e fontes por 30 dias; páginas sempre atualizadas
 <IfModule mod_expires.c>
