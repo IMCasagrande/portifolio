@@ -1,0 +1,3 @@
+# Linktree IMC — pasta links como raiz do subdomínio/pasta
+Options -Indexes
+DirectoryIndex index.html
