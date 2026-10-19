@@ -1,3 +1,8 @@
 # Proposta comercial (valores) e backups: não vão para o repositório público
 apresentacao*.html
 *.bak*
+
+# Acessos e senhas: nunca vão para o repositório público
+docs/links_e_uteis*
+*senha*
+*acessos*
