@@ -1,0 +1,7 @@
+# Força HTTPS e usa o domínio sem "www"
+RewriteEngine On
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteRule ^ https://institutomedicocasagrande.com.br%{REQUEST_URI} [L,R=301]
+
+Options -Indexes
