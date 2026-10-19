@@ -1,0 +1,24 @@
+# Instituto Médico Casagrande — https://institutomedicocasagrande.com.br
+User-agent: *
+Allow: /
+
+# Buscadores e assistentes de IA podem ler e citar o site
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://institutomedicocasagrande.com.br/sitemap.xml
