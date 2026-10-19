@@ -209,6 +209,18 @@
     .book-kind { margin-bottom: 6px; color: var(--blue); font-size: .7rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
     .book h3 { margin-bottom: 8px; font-family: var(--display); font-size: clamp(1.3rem, 2vw, 1.6rem); font-weight: 400; }
     .book p { margin: 0; font-size: .9rem; }
+    .book .paper-link { white-space: nowrap; }
+    .chapter-list { display: grid; margin: 16px 0 0; padding: 0; list-style: none; counter-reset: ch; }
+    .chapter-list li { position: relative; display: grid; gap: 3px; padding: 12px 0 12px 34px; border-top: 1px solid var(--line); counter-increment: ch; }
+    .chapter-list li::before { position: absolute; top: 12px; left: 0; color: var(--turquoise); content: counter(ch, decimal-leading-zero); font-family: var(--display); font-size: 1.05rem; line-height: 1.3; }
+    .chapter-list strong { color: var(--ink); font-size: .95rem; font-weight: 700; line-height: 1.4; }
+    .chapter-list span { color: var(--ink-soft); font-size: .84rem; }
+    .chapter-list .tag, .annal-list .tag { margin-left: 8px; font-style: normal; vertical-align: 1px; }
+    .annals { padding-top: 0; }
+    .annal-list { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; counter-reset: an; }
+    .annal-list li { position: relative; padding: 18px 22px 18px 64px; border: 1px solid var(--line); border-radius: 18px; background: var(--white); counter-increment: an; }
+    .annal-list li::before { position: absolute; top: 16px; left: 22px; color: var(--blue); content: counter(an, decimal-leading-zero); font-family: var(--display); font-size: 1.15rem; }
+    .annal-list strong { color: var(--ink); font-size: .95rem; font-weight: 650; line-height: 1.45; }
 
     /* ---------- ensino ---------- */
     .teach { position: relative; overflow: hidden; color: var(--white); background: var(--blue-deep); }
@@ -310,6 +322,9 @@
       .paper { padding: 20px 18px; }
       .book { grid-template-columns: 52px minmax(0, 1fr); gap: 16px; padding: 22px 18px; }
       .book-spine { height: 72px; }
+      .chapter-list li { padding-left: 28px; }
+      .annal-list li { padding: 16px 16px 16px 50px; }
+      .annal-list li::before { left: 16px; }
       .teach-list li { grid-template-columns: 1fr; gap: 6px; }
       .cta-panel { border-radius: 24px; padding: 34px 24px; }
       .cta-actions .btn { width: 100%; }
@@ -370,7 +385,7 @@
       <div class="wrap">
         <ul class="stats" aria-label="Produção em números">
           <li class="rv"><strong>28</strong><span>artigos publicados na Revista CPAQV</span></li>
-          <li class="rv" style="--d:80ms"><strong>1 + 1</strong><span>livro e capítulo de livro</span></li>
+          <li class="rv" style="--d:80ms"><strong>9</strong><span>capítulos de livros, além de 7 trabalhos em anais</span></li>
           <li class="rv" style="--d:160ms"><strong>2013</strong><span>preceptor da residência em Ortopedia e Traumatologia desde</span></li>
           <li class="rv" style="--d:240ms"><strong>Mestre</strong><span>em Ciências do Movimento Humano (UNIMEP)</span></li>
         </ul>
@@ -383,8 +398,8 @@
           <p class="eyebrow rv">Do mestrado ao centro cirúrgico</p>
           <h2 id="feature-title" class="rv" style="--d:80ms">Precisão no planejamento <em>da prótese de quadril.</em></h2>
           <p class="rv" style="--d:160ms">No mestrado em Ciências do Movimento Humano, o Dr. Raul desenvolveu e validou o software ACET, que determina os ângulos de inclinação e anteversão do componente acetabular no espaço tridimensional do quadril.</p>
-          <p class="rv" style="--d:200ms">O posicionamento desse componente é um dos pontos centrais da artroplastia (prótese) do quadril. O tema rendeu artigo como primeiro autor e capítulo de livro sobre inovação em ortopedia.</p>
-          <blockquote class="rv" style="--d:240ms">“Desenvolvimento e validação do software ACET para determinação do ângulo de inclinação e anteversão acetabular no espaço tridimensional do quadril.”<small>Dissertação de mestrado · UNIMEP · 2016 · Bolsa CAPES</small></blockquote>
+          <p class="rv" style="--d:200ms">O posicionamento desse componente é um dos pontos centrais da artroplastia (prótese) do quadril. Na validação, o software mediu esses ângulos em radiografias de 72 pacientes submetidos à artroplastia total do quadril. O tema rendeu artigo, capítulo de livro e trabalho em anais como primeiro autor.</p>
+          <blockquote class="rv" style="--d:240ms">“Desenvolvimento e validação do software ACET para determinação do ângulo de inclinação e anteversão acetabular no espaço tridimensional do quadril.”<small>Dissertação de mestrado · UNIMEP · defendida em 24/11/2016 · Bolsa CAPES</small></blockquote>
         </div>
         <figure class="angle-card rv" style="--d:120ms">
           <svg viewBox="0 0 420 300" role="img" aria-labelledby="angle-desc">
@@ -669,27 +684,69 @@
       <div class="wrap books-grid">
         <div class="sticky-col">
           <p class="eyebrow rv">Livros e capítulos</p>
-          <h2 id="books-title" class="rv" style="--d:80ms">Conhecimento que vira <em>referência.</em></h2>
-          <p class="rv" style="--d:160ms">Obras escritas com o Prof. Dr. Guanis de Barros Vilela Junior, orientador do mestrado, unindo fisiologia, biomecânica e ortopedia.</p>
+          <h2 id="books-title" class="rv" style="--d:80ms">9 capítulos <em>em 3 livros.</em></h2>
+          <p class="rv" style="--d:160ms">Capítulos escritos com o Prof. Dr. Guanis de Barros Vilela Junior, orientador do mestrado, e grupos de pesquisa em biomecânica, unindo fisiologia, tecnologia e ortopedia.</p>
         </div>
         <div class="book-list">
           <article class="book rv">
             <span class="book-spine" aria-hidden="true"></span>
             <div>
-              <p class="book-kind">Livro · 2020</p>
-              <h3>Tratado de Musculação</h3>
-              <p>Vilela Junior, G. B.; Casagrande, R. M. 1. ed. São Paulo: Phorte, 2020. 300 p.</p>
+              <p class="book-kind">2026</p>
+              <h3>Biomecânica do Esporte</h3>
+              <p>Vilela Junior, G. B. et al. (Org.). 2026. 559 p.</p>
+              <ol class="chapter-list">
+                <li><strong>Epidemiologia e biomecânica das lesões no cíngulo inferior</strong><span>Casagrande, R. M.; Vilela Junior, G. B. <em class="tag tag--first">1º autor</em></span></li>
+                <li><strong>Epidemiologia e biomecânica das lesões no cíngulo superior</strong><span>Vilela Junior, G. B.; Casagrande, R. M.</span></li>
+                <li><strong>Fundamentos da biomecânica tensegráfica</strong><span>Autoria de Casagrande, R. M.</span></li>
+                <li><strong>Epidemiologia e biomecânica da coluna vertebral</strong><span>Autoria de Casagrande, R. M.</span></li>
+              </ol>
             </div>
           </article>
-          <article class="book book--chapter rv" style="--d:100ms">
+          <article class="book book--chapter rv" style="--d:80ms">
             <span class="book-spine" aria-hidden="true"></span>
             <div>
-              <p class="book-kind">Capítulo · 2018</p>
-              <h3>Inovação em ortopedia: software para determinação do ângulo acetabular</h3>
-              <p>Em: Vilela Junior, G. B. (Org.). <em>Qualidade de vida, biomecânica e novas tecnologias</em>. Curitiba: CRV, 2018. p. 105.</p>
+              <p class="book-kind">Phorte · 2022</p>
+              <h3>Tratado de Musculação</h3>
+              <p>Charro, M. A.; Figueira Junior, A.; Allegretti, G. (Org.). 2. ed. rev. e ampl. São Paulo: Phorte, 2022. 712 p. ISBN 978-65-88868-16-4.</p>
+              <ol class="chapter-list">
+                <li><strong>Capítulo 12 · Biomecânica das lesões no treinamento de força</strong><span>Vilela Junior, G. B.; Casagrande, R. M.; Bley, A. S.; Marchetti, P. H.</span></li>
+              </ol>
+            </div>
+          </article>
+          <article class="book book--chapter rv" style="--d:120ms">
+            <span class="book-spine" aria-hidden="true"></span>
+            <div>
+              <p class="book-kind">CRV · 2018</p>
+              <h3>Qualidade de vida, biomecânica e novas tecnologias</h3>
+              <p>Vilela Junior, G. B. (Org.). Curitiba: CRV, 2018. 176 p. Coleção Qualidade de Vida e Biomecânica, v. 1. <a class="paper-link" href="https://doi.org/10.24824/978854442066.9" target="_blank" rel="noopener noreferrer">DOI 10.24824/978854442066.9 <span aria-hidden="true">↗</span></a></p>
+              <ol class="chapter-list">
+                <li><strong>Inovação em ortopedia: software para determinação do ângulo de anteversão acetabular</strong><span>Casagrande, R. M. e mais 12 autores <em class="tag tag--first">1º autor</em></span></li>
+                <li><strong>Inovação tecnológica e análise tridimensional do movimento humano</strong><span>Vieira, F. S. F.; Casagrande, R. M. e mais 11 autores</span></li>
+                <li><strong>Software Orthoqualis: avaliação em ortopedia e qualidade de vida</strong><span>Moraes, V. R.; Casagrande, R. M. e mais 11 autores</span></li>
+                <li><strong>Cloud Solution: qualidade de vida no ambiente corporativo</strong><span>Oliveira, H. R. F.; Casagrande, R. M. e mais 11 autores</span></li>
+              </ol>
             </div>
           </article>
         </div>
+      </div>
+    </section>
+
+    <section class="section annals" aria-labelledby="annals-title">
+      <div class="wrap books-grid">
+        <div class="sticky-col">
+          <p class="eyebrow rv">Trabalhos em anais</p>
+          <h2 id="annals-title" class="rv" style="--d:80ms">13ª Mostra Acadêmica <em>da UNIMEP.</em></h2>
+          <p class="rv" style="--d:160ms">Sete trabalhos publicados nos anais (v. 2) da 13ª Mostra Acadêmica e do 13º Congresso de Pós-Graduação da Universidade Metodista de Piracicaba, de 27 a 29 de outubro de 2015.</p>
+        </div>
+        <ol class="annal-list">
+          <li class="rv"><strong>Determinação do posicionamento tridimensional da cúpula acetabular em pacientes de artroplastia total do quadril</strong><em class="tag tag--first">1º autor</em></li>
+          <li class="rv"><strong>Análise do comportamento do centro de pressão (COP) no equilíbrio com olhos abertos e fechados em mulheres no processo de envelhecimento</strong></li>
+          <li class="rv"><strong>Análise do comportamento do centro de pressão (COP) nas tarefas de transferência bipodal-unipodal com olhos abertos e fechados em mulheres fisicamente ativas no envelhecimento</strong></li>
+          <li class="rv"><strong>Percepção da qualidade de vida de mulheres em processo de envelhecimento</strong></li>
+          <li class="rv"><strong>Percepção de desconforto através do diagrama de Corlett na posição sentada de escolares</strong></li>
+          <li class="rv"><strong>O uso da foto bioeletrográfica na comparação entre mama com câncer e mama saudável</strong></li>
+          <li class="rv"><strong>Validação parcial do software Hergos: alcoolismo e tabagismo</strong></li>
+        </ol>
       </div>
     </section>
 
