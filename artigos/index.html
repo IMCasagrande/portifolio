@@ -119,6 +119,14 @@
     .intro .lead { max-width: 52ch; color: #dbeaf3; }
     .intro-links { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 26px; }
     .intro-links .text-link { color: var(--turquoise-light); }
+    .flex-break { flex-basis: 100%; height: 0; }
+    .pdf-btn { min-height: 48px; padding: 11px 20px; font-size: .92rem; }
+    .pdf-card { display: flex; align-items: center; gap: 14px; max-width: 380px; margin-top: 8px; padding: 14px 18px 14px 14px; border: 1px solid var(--line); border-radius: 18px; background: var(--white); text-decoration: none; transition: border-color 200ms ease, box-shadow 300ms var(--ease-out), transform 160ms ease-out; }
+    .pdf-card:active { transform: scale(.98); }
+    .pdf-ico { display: grid; width: 44px; height: 52px; flex: none; place-items: center; border-radius: 6px 12px 6px 6px; color: var(--white); background: var(--blue-deep); font-size: .7rem; font-weight: 800; letter-spacing: .08em; }
+    .pdf-card strong { display: block; color: var(--ink); font-size: .92rem; line-height: 1.3; }
+    .pdf-card small { color: var(--ink-soft); font-size: .78rem; }
+    @media (hover: hover) and (pointer: fine) { .pdf-card:hover { border-color: #bfe3e0; box-shadow: 0 16px 36px rgba(16, 46, 74, .08); } }
     .intro-links .text-link:hover { color: var(--white); }
     .js .intro-copy > * { opacity: 0; transform: translateY(18px); animation: rise 900ms var(--ease-out) forwards; }
     .js .intro-copy > *:nth-child(2) { animation-delay: 80ms; }
@@ -328,6 +336,7 @@
       .teach-list li { grid-template-columns: 1fr; gap: 6px; }
       .cta-panel { border-radius: 24px; padding: 34px 24px; }
       .cta-actions .btn { width: 100%; }
+      .pdf-btn { width: 100%; }
       .footer-inner { align-items: flex-start; flex-direction: column; }
       .footer-brand { align-items: flex-start; flex-direction: column; gap: 10px; }
       .site-footer { margin-top: 56px; padding-bottom: 26px; }
@@ -372,6 +381,8 @@
           <h1 id="intro-title">Artigos e <em>produção científica</em></h1>
           <p class="lead">Pesquisa em cirurgia do quadril, fraturas e biomecânica do movimento humano, ao lado da formação de novos ortopedistas na residência médica da Faculdade de Medicina de Jundiaí.</p>
           <div class="intro-links">
+            <a class="btn btn--light pdf-btn" href="producao-bibliografica-dr-raul-casagrande.pdf" target="_blank" rel="noopener" download>Baixar produção bibliográfica (PDF) <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v12M6 11l6 6 6-6M5 20h14"/></svg></a>
+            <span class="flex-break" aria-hidden="true"></span>
             <a class="text-link" href="#artigos">Ver os artigos <span aria-hidden="true">↓</span></a>
             <a class="text-link" href="http://lattes.cnpq.br/2404316914246745" target="_blank" rel="noopener noreferrer">Currículo Lattes <span aria-hidden="true">↗</span></a>
             <a class="text-link" href="https://orcid.org/0009-0003-1543-4581" target="_blank" rel="noopener noreferrer">ORCID <span aria-hidden="true">↗</span></a>
@@ -686,6 +697,7 @@
           <p class="eyebrow rv">Livros e capítulos</p>
           <h2 id="books-title" class="rv" style="--d:80ms">9 capítulos <em>em 3 livros.</em></h2>
           <p class="rv" style="--d:160ms">Capítulos escritos com o Prof. Dr. Guanis de Barros Vilela Junior, orientador do mestrado, e grupos de pesquisa em biomecânica, unindo fisiologia, tecnologia e ortopedia.</p>
+          <a class="pdf-card rv" style="--d:220ms" href="producao-bibliografica-dr-raul-casagrande.pdf" target="_blank" rel="noopener" download><span class="pdf-ico" aria-hidden="true">PDF</span><span><strong>Produção bibliográfica e científica</strong><small>Capítulos, anais e dissertação · 0,6 MB</small></span></a>
         </div>
         <div class="book-list">
           <article class="book rv">
